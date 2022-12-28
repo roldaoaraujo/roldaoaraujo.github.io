@@ -1,47 +1,37 @@
 // Getting UI Elements
+const questionContainer = document.querySelector(".question-container");
 
-const buttons = document.querySelectorAll(".button");
+const message =
+  "O segredo está em um método simples e automático, clique abaixo para saber mais.";
+
 const title = document.getElementById("title");
 const question = document.getElementById("question");
-const buttonsArray = Array.from(buttons);
-const loader = document.getElementById("loader");
 
-let currentQuestionIndex = 0;
-let quizQuestions = [];
-let numberOfQuestions = quizQuestions.length - 1;
+const successContainer = document.querySelector(".success-container");
 
-let URL = "https://roldao-araujo.outsystemscloud.com/Quiz/rest/get/questions";
+const yesBtn = document.getElementById("yes-btn");
+const noBtn = document.getElementById("no-btn");
+const nextBtn = document.getElementById("next-btn");
+const buttonsContainer = document.querySelector(".buttons-container");
+const nextContainer = document.querySelector(".next-container");
 
-fetch(URL, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: "fb",
-})
-  .then((response) => response.json())
-  .then((data) => {
-    quizQuestions = data;
-    numberOfQuestions = quizQuestions.length - 1;
-    buildQuestion();
-    loader.classList.add("hide");
-  });
+yesBtn.addEventListener("click", handleFirstAnswer);
 
-function buildQuestion() {
-  const currentQuestion = quizQuestions[currentQuestionIndex];
-  title.innerText = currentQuestion.title;
-  question.innerText = currentQuestion.question;
+noBtn.addEventListener("click", handleFirstAnswer);
+
+nextBtn.addEventListener("click", handleNext);
+
+function handleFirstAnswer() {
+  title.classList.add("hide");
+  question.textContent = message;
+  buttonsContainer.classList.add("hide");
+  nextContainer.classList.remove("hide");
 }
 
-function handleAnswer() {
-  if (currentQuestionIndex >= numberOfQuestions) {
-    window.location.href = "https://secure.doppus.com/go/GOHH8E9Z3J3EB00O";
-    return;
-  }
-  currentQuestionIndex++;
-  buildQuestion();
-}
+function handleNext() {
+  questionContainer.classList.add("hide");
+  nextContainer.classList.add("hide");
+  successContainer.classList.remove("hide");
 
-buttonsArray.forEach(function (element) {
-  element.addEventListener("click", handleAnswer);
-});
+  window.location.href = "https://secure.doppus.com/go/GOHH8E9Z3J3EB0ZO";
+}
