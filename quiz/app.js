@@ -1,8 +1,8 @@
 // Getting UI Elements
-const questionContainer = document.querySelector(".question-container");
+const questionContainer = document.querySelector("#question-container");
 
 const message =
-  "O segredo está em um método simples e automático, clique abaixo para saber mais.";
+  "Sua vaga está GARANTIDA! Acessando apresentação...";
 
 const title = document.getElementById("title");
 const question = document.getElementById("question");
@@ -19,19 +19,18 @@ yesBtn.addEventListener("click", handleFirstAnswer);
 
 noBtn.addEventListener("click", handleFirstAnswer);
 
-nextBtn.addEventListener("click", handleNext);
 
 function handleFirstAnswer() {
   title.classList.add("hide");
-  question.textContent = message;
   buttonsContainer.classList.add("hide");
-  nextContainer.classList.remove("hide");
+  handleNext()
+  
 }
 
 function handleNext() {
   questionContainer.classList.add("hide");
-  nextContainer.classList.add("hide");
   successContainer.classList.remove("hide");
-
-  window.location.href = "https://secure.doppus.com/go/GOHH8E9Z3J3EB0ZO";
+  setTimeout(4000, 
+    window.location.href = "https://secure.doppus.com/go/G8889E9Z3J3E53JO") 
+  
 }

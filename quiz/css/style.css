@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
+p {
+  margin: 0;
+}
+
 :root {
-  --color-primary: #000;
+  --color-primary: #fff;
   --color-secondary: rgba(0, 0, 0, 0.5);
   --box-shadow-base: 0 5px 25px rgba(0, 0, 0, 0.1);
 }
@@ -14,18 +20,15 @@ img {
   height: auto;
 }
 
+
 body {
-  background-color: var(--color-secondary);
-  color: #fff;
-  font-family: "Josefin Sans", sans-serif;
-  margin: 0;
-  background-image: linear-gradient(
-      rgba(6, 14, 22, 0.75),
-      rgba(6, 14, 22, 0.75)
-    ),
-    url("../img/notebook-in-paris.jpg");
+  background-image: url("../img/bg.jpg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
   background-size: cover;
-  line-height: 1.4;
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 0
 }
 
 a {
@@ -42,14 +45,19 @@ h1 {
 
 p {
   font-size: 1.5em;
+  color: #fff;
 }
 
 .red {
   background-color: darkred;
 }
 
-.green {
-  background-color: darkgreen;
+.bg-grey {
+  background-color: rgb(105, 103, 103);
+}
+
+.bg-green {
+  background-color: rgb(15,127,123);
 }
 
 .hide {
@@ -62,23 +70,29 @@ p {
 }
 
 .warning-banner {
+
   width: 100%;
   min-height: 30px;
   display: flex;
   justify-content: flex-start;
+  text-align: center;
   align-items: center;
-  font-size: 0.6em;
+  font-size: 0.7em;
   border: none;
   font-weight: 400;
-  font-family: Arial, Helvetica, sans-serif;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
+.warning-banner .center-container {
+  padding: 10px 0;
+}
+
 .main {
-  min-height: 100vh;
+  min-height: 93vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 #quiz {
@@ -97,13 +111,24 @@ p {
   background-color: var(--color-secondary);
   padding: 60px;
   border-radius: 4px;
-  font-size: 2em;
+  font-size: 1.5em;
   box-shadow: var(--box-shadow-base);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   min-height: 250px;
   justify-content: center;
   align-items: center;
-  border: 6px solid var(--color-primary);
+  border: 6px solid #04525B;
+}
+
+#question-container ul {
+  text-align: left;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+#question-container ul li {
+  margin-bottom: 10px;
+  list-style: none;
 }
 
 .buttons-container {
@@ -123,6 +148,7 @@ p {
   border-bottom: 6px solid var(--color-secondary);
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .button i {
@@ -147,7 +173,7 @@ footer {
   min-height: 50px;
   text-align: center;
   margin-top: 16px;
-  font-size: 0.8em;
+  font-size: 0.6em;
 }
 
 .button:first-of-type {
