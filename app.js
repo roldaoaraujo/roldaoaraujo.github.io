@@ -30,7 +30,7 @@ function handleFirstAnswer() {
 function handleNext() {
   questionContainer.classList.add("hide");
   successContainer.classList.remove("hide");
-  setTimeout(3000, 
+  setTimeout(2000, 
     window.location.href = "https://secure.doppus.com/go/G8889E9Z3J3E53JO") 
   
 }
