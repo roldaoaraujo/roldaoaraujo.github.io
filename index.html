@@ -2,37 +2,83 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" lang="pt-BR">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css">
   <script src="https://kit.fontawesome.com/e6e2df95bc.js" crossorigin="anonymous"></script>
-  <title>Prosperidade Moderna</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Quiz - Método Inteligência Artificial</title>
 </head>
 
 <body>
 
-  <div class="content">
-
-    <div id="video-container">
-      <div class="video-full">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/sgFYuJ9UcdM?controls=0&rel=0&autoplay=1"
-          title="YouTube video player"
-          allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture; modestbranding;"
-          allowfullscreen></iframe>
+  <div class="warning-banner red">
+    <div class="center-container">
+      <h1><i class="fa-solid fa-triangle-exclamation"></i><strong> ATENÇÃO!</strong></h1>
+      <p >
+         Devido a alta demanda o acesso a apresentação é <strong> LIMITADO</strong>.
+      </p>
+      <p>
+        Responda a pergunta abaixo para continuar.
+      </p>
+    </div>
+  </div>
+  <div class="center-container main">
+    <section id="quiz">
+      <div class="quiz-list">
+        <div class="question-box">
+          <div class="success-container hide">
+            <p>
+              Sua vaga está <strong><span style="color: #0fe37b">GARANTIDA!</span></strong>
+              <br>A apresentação está sendo liberada...
+            </p>
+            <div class="lds-facebook">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div id="question-container">
+           
+            <div id="question">
+              <h1 id="title">PERGUNTA</h1>
+              <p>
+                Você utiliza alguma dessas redes sociais?
+              </p>
+              <ul>
+                <li><i class="fa-brands fa-instagram"></i> Instagram</li>
+                <li><i class="fa-brands fa-square-facebook"></i> Facebook</li>
+                <li><i class="fa-brands fa-tiktok"></i> TikTok</li>
+                <li><i class="fa-brands fa-youtube"></i> Youtube</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buttons-container">
+        <a id="yes-btn" class="button bg-green">
+          <i class="fa-solid fa-thumbs-up"></i>
+          SIM
+        </a>
+        <a id="no-btn" class="button bg-grey">
+          <i class="fa-solid fa-thumbs-down"></i>
+          NÃO
+        </a>
       </div>
 
-    </div>
-    <a href="https://secure.doppus.com/go/GOHH8E9Z3J3EB00O" class="button">Saiba mais</a>
-
-    <footer>© 2022 <a href="https://prosperidademoerna.com"> Prosperidade Moderna</a> - Todos os direitos
-      reservardos. Este site não
-      faz
-      parte
-      nem é endorssado pelo Facebook. Facebook é uma marca comercial de Meta, Inc </footer>
+      <footer> <p> © 2023<a href="https://prosperidademoerna.com"> Prosperidade Moderna</a> - Todos os direitos
+        reservardos.</p>
+        <p> 
+        Este site não
+        faz
+        parte
+        nem é endorssado pelo Facebook. Facebook é uma marca comercial de Meta, Inc </p></footer>
   </div>
+  </section><!--End of QUIZ  -->
+
+  </div> <!-- End of main container -->
+
+  <script src="./app.js"></script>
 </body>
 
 </html>
