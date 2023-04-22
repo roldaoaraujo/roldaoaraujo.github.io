@@ -57,7 +57,7 @@ p {
 }
 
 .bg-green {
-  background-color: rgb(15,127,123);
+  background-color: #0f7f7b;
 }
 
 .hide {
@@ -88,11 +88,10 @@ p {
 }
 
 .main {
-  min-height: 93vh;
+  min-height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 }
 
 #quiz {
@@ -195,6 +194,17 @@ footer {
   margin-right: 0;
 }
 
+footer ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 1em;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
 /*  Loader....*/
 .lds-facebook {
   display: inline-block;
@@ -269,4 +279,27 @@ footer {
   #question-container ul li {
     font-size: 0.9em
   }
+}
+
+
+/* Politica de Privacidade*/
+.legal {
+    margin-top: 20px;
+
+}
+
+.legal section {
+  text-align: left; 
+  font-size: 0.7em
+}
+
+.legal .question-box {
+  padding: 10px 40px;
+  padding-bottom: 30px;
+  max-height: 750px;
+  overflow-y: auto;
+}
+
+.legal a {
+  display: block;
 }
