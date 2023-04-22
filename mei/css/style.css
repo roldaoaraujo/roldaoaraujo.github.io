@@ -124,6 +124,7 @@ p {
   text-align: left;
   font-size: 1.4em;
   font-weight: bold;
+  padding: 0
 }
 
 #question-container ul li {
@@ -248,8 +249,8 @@ footer {
   }
   #quiz h1,
   #quiz p {
-    font-size: 0.8em;
-    line-height: 1;
+    font-size: 1.2em;
+    line-height: 1.5;
   }
 
   #quiz .question-box {
@@ -263,5 +264,9 @@ footer {
   #quiz .button {
     width: 100%;
     margin-bottom: 16px;
+  }
+
+  #question-container ul li {
+    font-size: 0.9em
   }
 }
