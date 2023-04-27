@@ -12,6 +12,15 @@ p, h1, h2, h3 {
   --color-primary: #0f7f7b;;
   --color-black: rgba(0, 0, 0, 0.5);
   --box-shadow-base: 0 5px 25px rgba(0, 0, 0, 0.1);
+
+  --space-xs: 8px;
+  --space-s: 12px;
+  --space-base: 16px;
+  --space-m: 20px;
+  --space-l: 24px;
+  --space-xl: 32px;
+  --space-xxl: 40px;
+  --space-xxxl: 48px;
 }
 
 img {
@@ -83,6 +92,8 @@ p {
 .main-menu nav {
   padding: 20px 0;
   text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.3em;
 }
 
 .main-menu ul {
@@ -123,6 +134,11 @@ p {
   background-color: #fff;
   border-radius: 4px;
 
+}
+
+.section-oportunities {
+  margin-top: var(--space-xxxl);
+  text-align: center;
 }
 
 footer {
