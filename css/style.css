@@ -1,18 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
-p, h1, h2, h3 {
+p,
+h1,
+h2,
+h3 {
   margin: 0;
 }
 
 
 :root {
-  --color-primary: #0f7f7b;;
+  --color-primary: #3b64d2;
+  --color-mia:#0f7f7b;
+  --color-mmi:#F5518E;
+  --color-mgr: #C20000;
   --color-black: rgba(0, 0, 0, 0.5);
   --box-shadow-base: 0 5px 25px rgba(0, 0, 0, 0.1);
-
   --space-xs: 8px;
   --space-s: 12px;
   --space-base: 16px;
@@ -30,9 +36,10 @@ img {
 }
 
 body {
-  color: #071e55;;
+  color: #071e55;
+  ;
   margin: 0;
-  background-color: #efefef;
+  /*background-color: #efefef;*/
   font-family: 'Dosis', sans-serif;
 }
 
@@ -46,14 +53,16 @@ h1 {
   font-size: 6em;
 }
 
-h3 {
+h2 {
   font-size: 3em;
 }
 
-p {
-  font-size: 1.5em;
-  color: #fff;
+h3 {
+  font-size: em;
+  line-height: 1;
 }
+
+
 
 .red {
   background-color: darkred;
@@ -75,7 +84,6 @@ p {
   max-width: 960px;
   margin: 0 auto;
 }
-
 
 
 .main {
@@ -109,14 +117,14 @@ p {
   font-weight: bold;
 }
 
-.main-menu ul li a:hover{
+.main-menu ul li a:hover {
   text-decoration: underline;
 }
 
 .hero {
   background-image: url("../img/hero.png");
   background-size: cover;
-  min-height: 650px;
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,15 +132,13 @@ p {
   color: #fff;
 }
 
-.hero-text-container::after {
-  content: '';
-  display: block;
-  margin: 0 auto;
-  margin-top: 10px;
-  height: 6px;
-  width: 250px;
-  background-color: #fff;
-  border-radius: 4px;
+.hero h3 {
+  font-size: 3.5em;
+  margin-bottom: var(--space-l);
+}
+
+.hero p {
+  font-size: 1.5em;
 
 }
 
@@ -140,6 +146,68 @@ p {
   margin-top: var(--space-xxxl);
   text-align: center;
 }
+
+.mia-text {
+  color: var(--color-mia);
+}
+.mmi-text {
+  color: var(--color-mmi);
+}
+.mgr-text {
+  color: var(--color-mgr);
+}
+
+.btn {
+  width: 250px;
+  height: 40px;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.mia-btn {
+  background-color: var(--color-mia);
+}
+
+.mmi-btn {
+  background-color: var(--color-mmi);
+}
+
+
+.mgr-btn {
+  background-color: var(--color-mgr);
+}
+
+.mia-btn:hover,
+.mmi-btn:hover,
+.mgr-btn:hover {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+
+.mia-btn:hover {
+  color: var(--color-mia);
+  border-color: var(--color-mia);
+}
+
+.mmi-btn:hover {
+  color: var(--color-mmi);
+  border-color: var(--color-mmi);
+}
+
+.mgr-btn:hover {
+  color: var(--color-mgr);
+  border-color: var(--color-mgr);
+}
+
 
 footer {
   min-height: 50px;
@@ -163,12 +231,12 @@ footer ul li a:hover {
 
 /* Politica de Privacidade*/
 .legal {
-    margin-top: 20px;
+  margin-top: 20px;
 
 }
 
 .legal section {
-  text-align: left; 
+  text-align: left;
   font-size: 0.7em
 }
 
@@ -183,7 +251,7 @@ footer ul li a:hover {
   display: block;
 }
 
-/* Ideias */
+
 
 .main-services {
   position: relative;
@@ -198,27 +266,45 @@ footer ul li a:hover {
   transition: all 1s;
 }
 
+.main-services img {
+  margin: 0 auto;
+}
+
+.main-services:hover {
+  border: 1px solid #89c7f7;
+  transform: scale(1.025);
+  transition: all 1s;
+}
+
+.main-services img,
+.main-services p,
+.main-services h3:first-of-type,
+.main-services a {
+  margin-top: var(--space-s);
+}
+
 .services-wrapper {
   position: relative;
   z-index: 999;
   overflow: hidden;
 }
+
 .services-wrapper::before {
-    background-image: radial-gradient(#e2ecf9 15%,transparent 25%);
-    background-size: 20px 20px;
-    position: absolute;
-    content: "";
-    width: 800px;
-    height: 225px;
-    left: 0;
-    margin-left: -412px;
-    top: 0;
-    margin-top: 5px;
-    z-index: -1;
+  background-image: radial-gradient(#e2ecf9 15%, transparent 25%);
+  background-size: 20px 20px;
+  position: absolute;
+  content: "";
+  width: 800px;
+  height: 225px;
+  left: 0;
+  margin-left: -412px;
+  top: 0;
+  margin-top: 5px;
+  z-index: -1;
 }
 
 .services-wrapper::after {
-  background-image: radial-gradient(#e2ecf9 15%,transparent 25%);
+  background-image: radial-gradient(#e2ecf9 15%, transparent 25%);
   background-size: 20px 20px;
   position: absolute;
   content: "";
