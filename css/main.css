@@ -1,105 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&display=swap');
 
-* {
-  box-sizing: border-box;
-}
-
-p,
-h1,
-h2,
-h3 {
-  margin: 0;
-}
-
-
 :root {
+
+  /* Colors*/
   --color-primary: #3b64d2;
   --color-mia:#0f7f7b;
   --color-mmi:#F5518E;
   --color-mgr: #C20000;
   --color-black: rgba(0, 0, 0, 0.5);
   --color-dark-blue: #071e55;
-  --box-shadow-base: 0 5px 25px rgba(0, 0, 0, 0.1);
-  --space-xs: 8px;
-  --space-s: 12px;
-  --space-base: 16px;
-  --space-m: 20px;
-  --space-l: 24px;
-  --space-xl: 32px;
-  --space-xxl: 40px;
-  --space-xxxl: 48px;
+
+}
+.row {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col3 {
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%
 }
 
-img {
-  max-width: 100%;
-  display: block;
-  height: auto;
+.gutter {
+  margin: 0 10px;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto
 }
 
 body {
   color: #071e55;
-  ;
   margin: 0;
-  /*background-color: #efefef;*/
   font-family: 'Dosis', sans-serif;
-}
 
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-h1 {
-  font-size: 6em;
-}
-
-h2 {
-  font-size: 3em;
-}
-
-h3 {
-  font-size: em;
-  line-height: 1;
-}
-
-
-
-.red {
-  background-color: darkred;
-}
-
-.bg-grey {
-  background-color: rgb(105, 103, 103);
-}
-
-.bg-green {
-  background-color: #0f7f7b;
 }
 
 .bg-dark-blue {
   background-color: var(--color-dark-blue);
 }
 
-.hide {
-  display: none !important;
-}
-
-.center-container {
-  max-width: 960px;
-  margin: 0 auto;
-}
 
 .border-top {
-  border-top: 1px solid #071e55;
+  border-top: 1px solid var(--color-dark-blue);
 }
 
-
-.main {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 .main-menu {
   background-color: var(--color-primary);
@@ -244,36 +196,7 @@ h3 {
 }
 
 
-footer {
-  min-height: 50px;
-  padding: var(--space-l) 0;
-  font-size: 1em;
-  color: #fff;
-  text-align: center;
-}
-
-footer ul {
-  padding: 0;
-}
-
-footer ul li {
-  list-style: none;
-  display: inline-block;
-  margin-right: 10px;
-  font-size: 1em;
-}
-
-footer ul li a:hover {
-  text-decoration: underline;
-}
-
-.footer-links {
-  font-weight: bold;
-}
-
-
-
-/* Politica de Privacidade*/
+/* Privacy and Terms */
 .legal {
   margin-top: 20px;
 
@@ -286,7 +209,8 @@ footer ul li a:hover {
 .legal .question-box {
   padding: 10px 40px;
   padding-bottom: 30px;
-  max-height: 600px;
+  margin-bottom: 30px;
+  max-height: 450px;
   overflow-y: auto;
 }
 
@@ -294,6 +218,7 @@ footer ul li a:hover {
   display: block;
 }
 
+/* Cards*/ 
 
 .main-services {
   position: relative;
@@ -313,7 +238,7 @@ footer ul li a:hover {
 }
 
 .main-services h3 {
-  font-size: 1.8em;
+  font-size: 1.5em;
 }
 
 .main-services img {
@@ -365,4 +290,35 @@ footer ul li a:hover {
   bottom: 0;
   margin-bottom: 50px;
   z-index: -1;
+}
+
+
+/*  Quiz landing pages Styles  */
+
+
+
+/* Media Queries */
+
+@media (min-width: 576px) {
+  .container {
+      max-width:540px
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+      max-width:720px
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+      max-width:960px
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+      max-width:1140px
+  }
 }
