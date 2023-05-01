@@ -4,13 +4,14 @@
 
   /* Colors*/
   --color-primary: #3b64d2;
-  --color-mia:#0f7f7b;
-  --color-mmi:#F5518E;
+  --color-mia: #0f7f7b;
+  --color-mmi: #F5518E;
   --color-mgr: #C20000;
   --color-black: rgba(0, 0, 0, 0.5);
   --color-dark-blue: #071e55;
 
 }
+
 .row {
   display: flex;
   -ms-flex-wrap: wrap;
@@ -18,6 +19,7 @@
   margin-right: -15px;
   margin-left: -15px;
 }
+
 .col3 {
   -ms-flex: 0 0 33.333333%;
   flex: 0 0 33.333333%;
@@ -69,7 +71,7 @@ body {
   display: flex;
   justify-content: space-around;
   margin: 0;
-
+  flex-wrap: wrap;
 }
 
 .main-menu ul li {
@@ -111,15 +113,17 @@ body {
 .mia-text {
   color: var(--color-mia);
 }
+
 .mmi-text {
   color: var(--color-mmi);
 }
+
 .mgr-text {
   color: var(--color-mgr);
 }
 
 .btn {
-  width: 250px;
+  width: 100%;
   height: 40px;
   color: #fff;
   display: block;
@@ -131,6 +135,10 @@ body {
   border-radius: 5px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+a.btn:hover {
+  text-decoration: none;
 }
 
 .mia-btn {
@@ -178,7 +186,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
 }
 
 .section-quote i {
@@ -191,8 +199,9 @@ body {
 }
 
 .author-wrapper {
+  padding-right: var(--space-m);
   text-align: right;
-  font-size: 0.6rem; 
+  font-size: 0.6rem;
 }
 
 
@@ -203,7 +212,8 @@ body {
 }
 
 .legal section {
-  text-align: left;  font-size: 0.7em
+  text-align: left;
+  font-size: 0.7em
 }
 
 .legal .question-box {
@@ -218,7 +228,7 @@ body {
   display: block;
 }
 
-/* Cards*/ 
+/* Cards*/
 
 .main-services {
   position: relative;
@@ -293,32 +303,170 @@ body {
 }
 
 
-/*  Quiz landing pages Styles  */
+/*Oportunities*/
+
+.oportunities-container {
+  margin-top: var(--space-xl);
+}
+
+.oportunities-container h1 {
+  font-size: 2.5em;
+  margin-bottom: var(--space-xl);
+}
+
+.oportunity {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-xxxl);
+  align-items: center;
+  padding: var(--space-xxxl);
+  background-color: #fff;
+  border: 2px solid #e5efff;;
+  box-shadow: var(--box-shadow-base);
+}
+
+.oportunity h2 {
+  font-size: 1.8em;
+  margin-bottom: var(--space-base);
+}
+
+.oportunity p {
+  font-size: 1.2em;
+  margin-bottom: var(--space-base);
+}
 
 
+.oportunity-left-side {
+  text-align: center;
+  flex: 1;
+}
+
+.oportunity-left-side img {
+  margin: 0 auto;
+}
+
+.oportunity-right-side {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
 /* Media Queries */
 
 @media (min-width: 576px) {
   .container {
-      max-width:540px
+    max-width: 540px
   }
 }
 
 @media (min-width: 768px) {
   .container {
-      max-width:720px
+    max-width: 720px
   }
 }
 
 @media (min-width: 992px) {
   .container {
-      max-width:960px
+    max-width: 960px
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-      max-width:1140px
+    max-width: 1140px
   }
+}
+
+@media (max-width: 1000px) {
+  .col3 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 100%;
+    max-width: 100%
+  }
+
+  .main-services {
+    margin-top: 0px;
+  }
+
+  .oportunities-container {
+    padding: 0 var(--space-xl);
+  }
+
+}
+
+@media (max-width: 650px) {
+  .oportunity-left-side,
+  .oportunity-right-side {
+    flex: 1;  
+  }
+
+  .oportunity {
+    padding: var(--space-l);
+    flex-direction: column;
+  }
+
+  .oportunity img {
+    margin-bottom: var(--space-base);
+  }
+
+  .oportunity h2 {
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .main-menu ul {
+    text-align: center;
+  }
+
+  .main-menu ul li {
+    width: 100%;
+  }
+
+  .hero {
+    min-height: 300px;
+    padding: 0 var(--space-xs);
+  }
+
+  .hero h3 {
+    font-size: 2em;
+    margin-bottom: var(--space-s)
+  }
+
+  .hero p {
+    font-size: 1.3em;
+  }
+
+  .section-oportunities  {
+    padding-top: var(--space-l);
+  }
+
+  .section-oportunities h2 {
+    font-size: 2em;
+  }
+
+  
+  .services-wrapper {
+    margin-top: var(--space-l);
+  }
+
+  .section-quote {
+    margin-top: 0;
+  }
+  .section-quote i {
+    font-size: 2em;
+  }
+
+  .quote-wrapper p {
+    font-size: 2em;
+  }
+  
+  .author-wrapper {
+    padding-top: var(--space-base);
+    padding-right: var(--space-base);
+  }
+
+
 }
