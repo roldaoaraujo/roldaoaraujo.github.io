@@ -57,6 +57,9 @@ body {
 
 .content {
     flex: 1;
+    padding-top: var(--space-l);
+    padding-right:  var(--space-l);
+    padding-left:  var(--space-l);
 }
 
 .center-container {
@@ -74,6 +77,20 @@ body {
     align-items: center;
     border: var(--space-xs) solid #04525B;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.scrollable-box {
+    margin-top: var(--space-l);
+    max-height: 550px;
+    overflow-y: auto;
+    border: 2px solid #e5efff;
+    padding: var(--space-l) var(--space-xxxl);
+}
+
+.scrollable-box p,
+.scrollable-box ul li,
+.scrollable-box ol li {
+    margin-bottom: var(--space-base);
 }
 
 .text-bold {

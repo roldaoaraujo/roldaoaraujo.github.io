@@ -206,25 +206,9 @@ a.btn:hover {
 
 
 /* Privacy and Terms */
-.legal {
-  margin-top: 20px;
-
-}
-
-.legal section {
-  text-align: left;
-  font-size: 0.7em
-}
-
-.legal .question-box {
-  padding: 10px 40px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  max-height: 450px;
-  overflow-y: auto;
-}
 
 .legal a {
+  margin-bottom: var(--space-base);
   display: block;
 }
 
