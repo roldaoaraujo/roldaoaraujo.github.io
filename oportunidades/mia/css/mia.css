@@ -119,6 +119,16 @@ a.btn:hover {
   border-color: var(--color-dark-grey);
 }
 
+.btn-access {
+  margin-top: var(--space-xl);
+  
+}
+
+.btn-access i {
+  font-size: 0.8em;
+  margin-left: var(--space-s);
+}
+
 .legal {
   margin-top: var(--space-base);
 }
