@@ -72,6 +72,10 @@ body {
   margin: var(--space-base) auto;
 }
 
+.mia ul li {
+  list-style: none;
+}
+
 .btns-container {
   margin-top: var(--space-xl);
   display: flex;
